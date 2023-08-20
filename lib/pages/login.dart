@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:logon/pages/auth.dart';
-import 'package:logon/pages/first.dart';
 import 'package:logon/pages/home.dart';
+import 'package:logon/pages/main_function.dart';
 import 'package:logon/pages/signup.dart';
 import 'package:logon/pages/snack.dart';
 
@@ -20,11 +20,7 @@ class _LoginPageState extends State<LoginPage> {
   void logUserIn() async {
     String res = await AuthMethods().LogUserIn(email: _emalcontroller.text, password: _passwordcontroller.text);
     if (res == 'Success') {
-      Navigator.of(context).pushReplacement(
-        MaterialPageRoute(
-          builder: (context) => const FirstPage(),
-        ),
-      );
+      runAppWithCameras();
     } else {
       showSnackBar(res, context);
     }

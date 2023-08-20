@@ -15,7 +15,14 @@ class FirstPage extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsets.all(16.0),
-              child: Text('Chal Gya bc!!!!!'),
+              child: Text('Finally working'),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Padding(
+              padding: EdgeInsets.all(16.0),
+              child: Text('Welcome User'),
             ),
           ],
         ),
